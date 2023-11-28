@@ -13,34 +13,42 @@
       <!-- Profile Picture and Settings Button -->
       <div class="profile-section">
         <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
-        <button class="btn btn-outline-primary btn-sm"><i class="bi bi-gear"></i></button>
+        <div class="dropdown">
+          <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-gear"></i></button>
+          <ul class="dropdown-menu">
+            <li><button class="dropdown-item" type="button">Login</button></li>
+            <li><button class="dropdown-item" type="button">Register</button></li>
+          </ul>
+        </div>
       </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Colored with scrolling</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>Try scrolling the rest of the page to see this option in action.</p>
     </div>
   </div>
 
   <!-- Center Row -->
   <div class="row center-row">
-    <div class="col-md-2">
-      <!-- Collapsible Menu -->
-      <div class="collapsible-menu">
-        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Colored with scrolling</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <p>Try scrolling the rest of the page to see this option in action.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-10">
+<!--    <div class="col-md-2">-->
+<!--      &lt;!&ndash; Collapsible Menu &ndash;&gt;-->
+<!--      <div class="collapsible-menu">-->
+
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-md-10">-->
       <!-- Content Area -->
       <div class="content-area">
         <!-- Your content goes here -->
         <router-outlet></router-outlet>
       </div>
-    </div>
+<!--    </div>-->
   </div>
 
   <!-- Bottom Row -->
