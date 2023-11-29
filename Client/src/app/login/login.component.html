@@ -1,6 +1,8 @@
 <div class="container-fluid h-100 gap-3 position-relative">
-  <div class="col-md-4 p-2 position-absolute top-50 start-50 translate-middle">
-    <form>
+  <div class="col-md-2 p-2 position-absolute top-50 start-50 translate-middle">
+    <form
+      [formGroup] = "loginForm"
+      (ngSubmit)="onSubmit()">
       <!-- Email input -->
       <div class="form-outline mb-4">
         <input type="email" id="form2Example1" class="form-control" />
