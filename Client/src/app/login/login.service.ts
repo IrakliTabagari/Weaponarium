@@ -4,6 +4,7 @@ import {LoginWithEmailAndPasswordRequestModel} from "./models/LoginWithEmailAndP
 import {LoginResult} from "./models/LoginResult";
 import {Observable} from "rxjs";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,4 +17,29 @@ export class LoginService {
   loginWithEmailAndPassword(request: LoginWithEmailAndPasswordRequestModel): Observable<LoginResult> {
     return this.httpClient.post <LoginResult> (this.baseUrl +'/LoginWithEmailAndPassword', request)
   }
+
+  private setSession(token: string) {
+
+    localStorage.setItem('id_token', token);
+  }
+
+  logout() {
+    localStorage.removeItem("id_token");
+    localStorage.removeItem("expires_at");
+  }
+
+  public isLoggedIn(): boolean {
+    // return moment().isBefore(this.getExpiration());
+    return true;
+  }
+
+  isLoggedOut():boolean {
+    return !this.isLoggedIn();
+  }
+
+  getExpiration() {
+    const expiration = localStorage.getItem("expires_at");
+    // const expiresAt = JSON.parse(expiration);
+  }
+
 }

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {LoginService} from "./login.service";
 import {LoginWithEmailAndPasswordRequestModel} from "./models/LoginWithEmailAndPasswordRequestModel";
@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private loginService: LoginService) {
   }
+
   ngOnInit(): void {
   }
 
@@ -40,25 +41,26 @@ export class LoginComponent implements OnInit {
         <string>this.loginForm.get('userName')?.value,
         <string>this.loginForm.get('password')?.value
       )
-      ).subscribe(result => {
-
-          this.loading = false;
-          this.success = true;
-          // this.progressSpinnerService.closeSpinner(serviceUuid);
-        },
-        error => {
-          // this.progressSpinnerService.closeSpinner(serviceUuid);
-          this.loading = false;
-          this.success = false;
-          this.isError = true;
-          if (error.status === 0) {
-            this.errorMessage = "დაფიქსირდა ქსელური პრობლემა";
-          } else if (error.status === 500) {
-            this.errorMessage = "დაფიქსირდა შიდა სერვერული პრობლემა";
-          } else {
-            this.errorMessage = error.error;
-          }
-        });
+    ).subscribe({
+      next: (result) => {
+        this.loading = false;
+        this.success = true;
+        // this.progressSpinnerService.closeSpinner(serviceUuid);
+      },
+      error: (err) => {
+        // this.progressSpinnerService.closeSpinner(serviceUuid);
+        this.loading = false;
+        this.success = false;
+        this.isError = true;
+        if (err.status === 0) {
+          this.errorMessage = "დაფიქსირდა ქსელური პრობლემა";
+        } else if (err.status === 500) {
+          this.errorMessage = "დაფიქსირდა შიდა სერვერული პრობლემა";
+        } else {
+          this.errorMessage = err.error;
+        }
+      }
+    });
   }
 
 }
