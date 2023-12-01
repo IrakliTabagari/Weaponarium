@@ -5,8 +5,10 @@
       (ngSubmit)="onSubmit()">
       <!-- Email input -->
       <div class="form-outline mb-4">
-        <input type="email" id="form2Example1" class="form-control" />
-        <label class="form-label" for="form2Example1">Email address</label>
+        <label class="form-label" for="userName">UserName</label>
+        <input formControlName="userName" type="userName" name="userName" id="userName" class="form-control" />
+        <span *ngIf="this.loginForm.controls['userName'].errors?.['required']" class="text-danger">UserName is required.</span>
+        <span *ngIf="errors.userName" class="text-danger">{{errors.userName}}</span>
       </div>
 
       <!-- Password input -->

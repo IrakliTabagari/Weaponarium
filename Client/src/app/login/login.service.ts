@@ -18,7 +18,7 @@ export class LoginService {
     return this.httpClient.post <LoginResult> (this.baseUrl +'/LoginWithEmailAndPassword', request)
   }
 
-  private setSession(token: string) {
+  setSession(token: string) {
 
     localStorage.setItem('id_token', token);
   }
