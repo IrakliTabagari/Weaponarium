@@ -36,11 +36,20 @@ public class LoginService : ILoginService
             new(ClaimTypes.Name, user.UserName ?? ""),
             new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         };
+        
+        // Add Role Names as Claims
+        foreach (var userRole in user.UserRoles)
+        {
+            if (authClaims.Any(c => c.Value == userRole.Role.Name)) continue;
+            authClaims.Add(new Claim(CustomClaims.Permissions, userRole.Role.Name));
+        }
 
+        // Add Permissions as Claims
         foreach (var userRole in user.UserRoles.Where(ur => ur.Role.RoleClaims.Any()))
         {
             foreach (var roleClaim in userRole.Role.RoleClaims)
             {
+                if (authClaims.Any(c => c.Value == roleClaim.Name)) continue;
                 authClaims.Add(new Claim(CustomClaims.Permissions, roleClaim.Name));
             }
         }

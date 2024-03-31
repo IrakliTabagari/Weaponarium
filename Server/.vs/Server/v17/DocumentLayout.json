@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Development\\dotnet_projects\\WeaponariumFull\\Weaponarium\\Server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6EAB631D-347A-44DF-B9CB-C3B943EB7DA2}|Server.Application\\Server.Application.csproj|d:\\development\\dotnet_projects\\weaponariumfull\\weaponarium\\server\\server.application\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EAB631D-347A-44DF-B9CB-C3B943EB7DA2}|Server.Application\\Server.Application.csproj|solutionrelative:server.application\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A614174E-283C-4574-849E-0DF24D665F99}|Server.Api\\Server.Api.csproj|d:\\development\\dotnet_projects\\weaponariumfull\\weaponarium\\server\\server.api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A614174E-283C-4574-849E-0DF24D665F99}|Server.Api\\Server.Api.csproj|solutionrelative:server.api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A614174E-283C-4574-849E-0DF24D665F99}|Server.Api\\Server.Api.csproj|d:\\development\\dotnet_projects\\weaponariumfull\\weaponarium\\server\\server.api\\models\\login\\request\\loginwithemailandpasswordrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A614174E-283C-4574-849E-0DF24D665F99}|Server.Api\\Server.Api.csproj|solutionrelative:server.api\\models\\login\\request\\loginwithemailandpasswordrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A614174E-283C-4574-849E-0DF24D665F99}|Server.Api\\Server.Api.csproj|d:\\development\\dotnet_projects\\weaponariumfull\\weaponarium\\server\\server.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A614174E-283C-4574-849E-0DF24D665F99}|Server.Api\\Server.Api.csproj|solutionrelative:server.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Development\\dotnet_projects\\WeaponariumFull\\Weaponarium\\Server\\Server.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Server.Api\\Program.cs",
+              "ToolTip": "D:\\Development\\dotnet_projects\\WeaponariumFull\\Weaponarium\\Server\\Server.Api\\Program.cs",
+              "RelativeToolTip": "Server.Api\\Program.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T08:46:15.821Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginWithEmailAndPasswordRequestModel.cs",
+              "DocumentMoniker": "D:\\Development\\dotnet_projects\\WeaponariumFull\\Weaponarium\\Server\\Server.Api\\Models\\Login\\Request\\LoginWithEmailAndPasswordRequestModel.cs",
+              "RelativeDocumentMoniker": "Server.Api\\Models\\Login\\Request\\LoginWithEmailAndPasswordRequestModel.cs",
+              "ToolTip": "D:\\Development\\dotnet_projects\\WeaponariumFull\\Weaponarium\\Server\\Server.Api\\Models\\Login\\Request\\LoginWithEmailAndPasswordRequestModel.cs",
+              "RelativeToolTip": "Server.Api\\Models\\Login\\Request\\LoginWithEmailAndPasswordRequestModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T08:46:51.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\Development\\dotnet_projects\\WeaponariumFull\\Weaponarium\\Server\\Server.Api\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Server.Api\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\Development\\dotnet_projects\\WeaponariumFull\\Weaponarium\\Server\\Server.Api\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Server.Api\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAiwBUAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T08:46:36.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "D:\\Development\\dotnet_projects\\WeaponariumFull\\Weaponarium\\Server\\Server.Application\\Services\\LoginService.cs",
+              "RelativeDocumentMoniker": "Server.Application\\Services\\LoginService.cs",
+              "ToolTip": "D:\\Development\\dotnet_projects\\WeaponariumFull\\Weaponarium\\Server\\Server.Application\\Services\\LoginService.cs",
+              "RelativeToolTip": "Server.Application\\Services\\LoginService.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAiwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T08:48:39.518Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

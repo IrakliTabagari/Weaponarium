@@ -8,7 +8,10 @@
         <label class="form-label" for="userName">UserName</label>
         <input formControlName="userName" type="userName" name="userName" id="userName" class="form-control" />
         <span *ngIf="this.loginForm.controls['userName'].errors?.['required']" class="text-danger">UserName is required.</span>
-        <span *ngIf="errors.userName" class="text-danger">{{errors.userName}}</span>
+<!--        <span *ngIf="errors.userName" class="text-danger">{{errors.userName}}</span>-->
+        <div [hidden]="!serverValidationErrorService.hasWrongValue(loginForm, 'email')" class="col-xs-4 col-sm-4 col-md-3 col-md-3">
+          <span class="help-block">{{ serverValidationErrorService.getFieldError(loginForm, 'email')}}</span>
+        </div>
       </div>
 
       <!-- Password input -->

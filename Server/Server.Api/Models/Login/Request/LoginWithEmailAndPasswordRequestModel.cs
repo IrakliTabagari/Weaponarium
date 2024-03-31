@@ -2,14 +2,14 @@
 
 namespace Server.Api.Models.Login.Request;
 
-public class LoginWithEmailAndPasswordRequestModel
+public record class LoginWithEmailAndPasswordRequestModel
 {
     [Required]
     [MinLength(3)]
     [EmailAddress(ErrorMessage = "Email address is not valid.")]
-    public string Email { get; set; }
+    public required string Email { get; set; }
     
     [Required]
     [MinLength(3)]
-    public string Password { get; set; }
+    public required string Password { get; set; }
 }
