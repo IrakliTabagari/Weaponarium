@@ -12,11 +12,9 @@ export class ServerValidationErrorService {
   renderServerErrors(form: FormGroup, response: HttpErrorResponse) {
     let serverErrors = response.error.errors;
     for (let key in serverErrors) {
-      if (serverErrors.hasOwnProperty(key)) {
-        let control = form.get(key);
-        if (control) {
-          control.setErrors({serverError: serverErrors[key]});
-        }
+      let control = form.get(key.toLowerCase());
+      if (control) {
+        control.setErrors({serverError: serverErrors[key]});
       }
     }
   }

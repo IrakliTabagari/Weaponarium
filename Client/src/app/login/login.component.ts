@@ -53,12 +53,6 @@ export class LoginComponent implements OnInit {
   }
 
   protected onSubmitError(error: HttpErrorResponse) {
-    const errors = { };
-    for (const key in error.error.errors) {
-      if (Object.prototype.hasOwnProperty.call(error.error.errors, key)){
-        errors[key] = error.error.errors[key];
-      }
-    }
-    this.serverValidationErrorService.renderServerErrors(this.loginForm, response);
+    this.serverValidationErrorService.renderServerErrors(this.loginForm, error);
   }
 }
