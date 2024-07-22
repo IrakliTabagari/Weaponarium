@@ -19,6 +19,8 @@ public class WeaponariumDbContext
         IdentityUserToken<int>
     >
 {
+    public DbSet<Category> Categories { get; set; }
+    
     public WeaponariumDbContext(DbContextOptions<WeaponariumDbContext> options)
         : base(options)
     { }
@@ -31,7 +33,8 @@ public class WeaponariumDbContext
         modelBuilder.Entity<UserRole>(ConfigureUserRoles);
         modelBuilder.Entity<Role>(ConfigureRoles);
         modelBuilder.Entity<RoleClaim>(ConfigureRoleClaims);
-        modelBuilder.Entity<Permission>();
+        modelBuilder.Entity<Permission>(ConfigurePermissions);
+        modelBuilder.Entity<Category>(ConfigureCategories);
     }
 
     #region Auth Entity Config
@@ -83,6 +86,19 @@ public class WeaponariumDbContext
         var permissions = PermissionsManager.GetAllPermissions().Values;
         builder.HasData(permissions);
     }
+    
+    public static void ConfigureCategories(EntityTypeBuilder<Category> builder)
+    {
+        builder.ToTable("Category", "Weaponarium");
+        
+        builder
+            .HasOne(c => c.ParentCategory)
+            .WithMany(c => c.SubCategories)
+            .HasForeignKey(c => c.ParentId)
+            .OnDelete(DeleteBehavior.Restrict); // Prevent cascading deletes if necessary
+
+    }
+    
 
     #endregion
     

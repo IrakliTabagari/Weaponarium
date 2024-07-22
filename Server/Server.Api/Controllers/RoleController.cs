@@ -6,9 +6,10 @@ namespace Server.Api.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class RolesController : ControllerBase
+public class RoleController : ControllerBase
 {
     
+    [HttpGet]
     [Authorize(PermissionsTree.Roles.View)]
     public async Task<IActionResult> GetRoles()
     {
