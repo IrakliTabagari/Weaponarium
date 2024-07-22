@@ -1,12 +1,14 @@
-﻿using Server.Domain.Entities;
+﻿using LanguageExt.Common;
+using Server.Domain.Dtos.Roles;
+using Server.Domain.Entities;
 
 namespace Server.Domain.Interfaces.Services;
 
 public interface IRolesService
 {
-    Task<List<Role>> GetAllRoles();
-    Task<Role?> GetRoleById(int id);
+    Task<Result<List<RoleDto>>> GetAllRoles();
+    Task<Result<RoleDto>> GetRoleById(int id);
     Task UpdateRole(Role role);
     Task DeleteRole(Role role);
-    Task<Role> CreateRole(Role role);
+    Task<Result<RoleDto>> CreateRole(Role role);
 }

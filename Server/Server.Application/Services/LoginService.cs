@@ -41,11 +41,11 @@ public class LoginService : ILoginService
         foreach (var userRole in user.UserRoles)
         {
             if (authClaims.Any(c => c.Value == userRole.Role.Name)) continue;
-            authClaims.Add(new Claim(CustomClaims.Permissions, userRole.Role.Name));
+            authClaims.Add(new Claim(CustomClaims.Roles, userRole.Role.Name));
         }
 
         // Add Permissions as Claims
-        foreach (var userRole in user.UserRoles.Where(ur => ur.Role.RoleClaims.Any()))
+        foreach (var userRole in user.UserRoles.Where(ur => ur.Role.RoleClaims.Count != 0))
         {
             foreach (var roleClaim in userRole.Role.RoleClaims)
             {

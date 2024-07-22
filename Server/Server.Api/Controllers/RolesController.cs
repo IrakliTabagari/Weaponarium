@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Server.Domain.Constants;
 
 namespace Server.Api.Controllers;
 
@@ -7,4 +9,10 @@ namespace Server.Api.Controllers;
 public class RolesController : ControllerBase
 {
     
+    [Authorize(PermissionsTree.Roles.View)]
+    public async Task<IActionResult> GetRoles()
+    {
+        
+        return Ok();
+    }
 }

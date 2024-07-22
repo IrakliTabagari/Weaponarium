@@ -16,7 +16,7 @@ public class LoginController : ControllerBase
     }
 
     [HttpPost(nameof(LoginWithEmailAndPassword))]
-    // [Authorize(Permissions.Private.Users.Create)]
+    // [Authorize(Permissions.Users.Create)]
     public async Task<IActionResult> LoginWithEmailAndPassword(LoginWithEmailAndPasswordRequestModel request)
     {
         var loginResult = await _loginService.LoginWithUserNameAndPassword(request.Email, request.Password);
