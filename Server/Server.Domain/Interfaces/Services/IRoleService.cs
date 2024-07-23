@@ -4,7 +4,7 @@ using Server.Domain.Entities;
 
 namespace Server.Domain.Interfaces.Services;
 
-public interface IRolesService
+public interface IRoleService
 {
     Task<Result<List<RoleDto>>> GetAllRoles();
     Task<Result<RoleDto>> GetRoleById(int id);

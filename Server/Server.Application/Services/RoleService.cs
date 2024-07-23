@@ -5,7 +5,7 @@ using Server.Domain.Interfaces.Services;
 
 namespace Server.Application.Services;
 
-public class RolesService : IRolesService
+public class RoleService : IRoleService
 {
     public Task<Result<List<RoleDto>>> GetAllRoles()
     {
